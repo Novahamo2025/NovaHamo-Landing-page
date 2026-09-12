@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamotech IT Solutions & NovaHamo Technologies</title>
+  <meta name="description" content="Training, technology services, social links and branch information for Hamotech IT Solutions and NovaHamo Technologies." />
+  <style>
+    :root{
+      --red:#ef1919;
+      --deep-red:#b90e0e;
+      --navy:#0c1f55;
+      --green:#0a7a45;
+      --green-dark:#04552f;
+      --green-light:#eaf8f1;
+      --blue:#0b62d7;
+      --purple:#8a2be2;
+      --gold:#ffca28;
+      --ink:#13203f;
+      --muted:#667085;
+      --white:#fff;
+      --shadow:0 18px 45px rgba(10,47,31,.12);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,Segoe UI,Arial,sans-serif;
+      color:var(--ink);
+      background:linear-gradient(180deg,#f7fbff 0%,#f8fff9 100%);
+    }
+    .page{
+      width:min(1500px,96%);
+      margin:24px auto;
+      background:white;
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      border:1px solid #e8ecef;
+    }
+    .top{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      min-height:760px;
+    }
+    .left,.right{padding:30px;position:relative}
+    .left{background:linear-gradient(180deg,#fff 0%,#fff9f9 100%);border-right:3px solid #0b7a43}
+    .right{background:linear-gradient(180deg,#f8fffb 0%,#effbf5 100%)}
+    .brand-row{
+      display:flex;align-items:center;gap:18px;margin-bottom:18px;
+    }
+    .logo-badge{
+      width:84px;height:84px;border-radius:18px;display:grid;place-items:center;
+      font-size:34px;font-weight:900;color:#fff;flex:0 0 auto;
+    }
+    .red-logo{background:linear-gradient(145deg,#ff2323,#b90909)}
+    .logo-image{
+      background:#fff;
+      overflow:hidden;
+      border-radius:14px;
+      padding:3px;
+    }
+    .logo-image img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      display:block;
+    }
+    .green-logo{background:linear-gradient(145deg,#0d8e50,#04542f)}
+    h1{margin:0;font-size:clamp(32px,4vw,58px);line-height:.95;font-weight:950;letter-spacing:-1.5px}
+    .hamo{color:var(--red)} .solutions{color:#111}
+    .nova{color:var(--green)}
+    .subtitle{font-weight:900;font-size:21px;letter-spacing:.5px;color:var(--navy);margin-top:7px}
+    .tagline{margin-top:7px;font-size:14px;font-weight:900;letter-spacing:2.2px}
+    .training-line{font-size:28px;font-weight:900;line-height:1.2;margin:18px 0 22px}
+    .training-line span{color:var(--red)}
+    .content-grid{display:grid;grid-template-columns:1fr .92fr;gap:18px}
+    .panel{background:#fff;border:2px solid #f0b8b8;border-radius:22px;padding:18px}
+    .panel-title{
+      margin:-32px auto 14px;width:fit-content;
+      background:linear-gradient(90deg,#ef1919,#ff4d4d);
+      color:#fff;padding:8px 24px;border-radius:999px;
+      font-size:18px;font-weight:900;
+      box-shadow:0 10px 25px rgba(239,25,25,.18);
+    }
+    .course{display:flex;align-items:center;gap:12px;padding:11px 2px;border-bottom:1px solid #e6e6e6;font-weight:900;font-size:16px}
+    .course:last-child{border-bottom:0}
+    .course .dot{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#fff;background:var(--red);font-size:18px}
+    .connect{
+      background:#fff;border-radius:22px;padding:16px;box-shadow:0 12px 30px rgba(18,55,120,.10)
+    }
+    .connect h3{
+      margin:0 0 12px;text-align:center;background:linear-gradient(90deg,#15388f,#2d3baa);
+      color:#fff;padding:8px;border-radius:14px;font-size:19px
+    }
+    .social-link{
+      display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;
+      padding:12px 14px;border-radius:14px;margin:9px 0;font-weight:900;
+      box-shadow:0 8px 18px rgba(0,0,0,.08)
+    }
+    .social-link span:first-child{width:32px;height:32px;border-radius:9px;background:rgba(255,255,255,.18);display:grid;place-items:center}
+    .social-link .arrow{margin-left:auto}
+    .linkedin{background:#0A66C2}.instagram{background:linear-gradient(90deg,#833ab4,#e1306c,#f77737)}
+    .youtube{background:#f00000}.whatsapp{background:#16a34a}.facebook{background:#1877F2}
+    .indiaweb{background:#0a8f4c}.singaporeweb{background:linear-gradient(90deg,#5f2bb8,#8c41d8)}
+    .services-title{font-size:28px;font-weight:950;margin:16px 0 18px;color:var(--navy)}
+    .services-title span{color:var(--green)}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .service{
+      background:rgba(255,255,255,.9);border:1px solid #cfead9;border-radius:20px;padding:18px 12px;text-align:center;
+      min-height:150px;box-shadow:0 10px 24px rgba(20,95,55,.06)
+    }
+    .service .ico{font-size:40px;margin-bottom:8px}
+    .service b{display:block;font-size:17px;line-height:1.1}.service small{color:var(--muted)}
+    .hq{
+      margin-top:18px;background:linear-gradient(135deg,#0b3f31,#0c6781);
+      color:#fff;border:3px solid #ffda31;border-radius:24px;padding:20px;
+      display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;
+      box-shadow:0 12px 30px rgba(4,85,47,.16)
+    }
+    .flag{font-size:54px}
+    .hq .label{background:var(--gold);color:#222;padding:5px 14px;border-radius:999px;font-weight:900;width:fit-content;margin-bottom:8px}
+    .hq h2{margin:0;font-size:38px;color:#ffd75e}.hq p{margin:5px 0 0}
+    .branches{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+    .branch{
+      background:#0b6b43;color:#fff;border-radius:16px;padding:14px;font-weight:800
+    }
+    .footer{
+      display:grid;grid-template-columns:1fr 1fr;background:linear-gradient(90deg,#d40e0e 0%,#bd0d0d 49%,#045b37 51%,#034b2f 100%);
+      color:#fff
+    }
+    .foot-left,.foot-right{padding:22px 30px}
+    .foot-left{display:grid;grid-template-columns:.9fr 1.6fr;gap:24px}
+    .contact-title,.follow-title{font-size:26px;font-weight:950;margin:0 0 12px}
+    .phone{font-size:26px;font-weight:950;margin:7px 0}
+    .details p{margin:7px 0;font-size:14px}
+    .details a{color:#fff;text-decoration:none}
+    .follow-icons{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;text-align:center}
+    .follow-icons a{
+      color:#fff;text-decoration:none;font-size:12px;display:flex;flex-direction:column;gap:7px;align-items:center
+    }
+    .round{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.12);font-size:20px}
+    @media(max-width:1100px){
+      .top{grid-template-columns:1fr}
+      .left{border-right:0;border-bottom:3px solid #0b7a43}
+      .footer{grid-template-columns:1fr;background:linear-gradient(180deg,#c80e0e 0%,#c80e0e 49%,#045b37 51%,#045b37 100%)}
+    }
+    @media(max-width:720px){
+      .page{width:100%;margin:0;border-radius:0}
+      .left,.right{padding:20px}
+      .brand-row{align-items:flex-start}
+      .logo-badge{width:68px;height:68px}
+      .content-grid,.services,.branches,.foot-left{grid-template-columns:1fr}
+      .follow-icons{grid-template-columns:repeat(4,1fr)}
+      .training-line{font-size:22px}
+      .hq{grid-template-columns:1fr;text-align:center}
+      .hq .label{margin-left:auto;margin-right:auto}
+      .hq h2{font-size:30px}
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <section class="top">
+    <div class="left">
+      <div class="brand-row">
+        <div class="logo-badge logo-image"><img src="images/hamotech-logo.png" alt="Hamotech IT Solutions logo"></div>
+        <div>
+          <h1 class="hamo">HAMOTECH</h1>
+          <h1 class="solutions">IT SOLUTIONS</h1>
+          <div class="subtitle">LEARN &nbsp; | &nbsp; GROW &nbsp; | &nbsp; SUCCEED</div>
+        </div>
+      </div>
+
+      <div class="training-line">Job-Oriented Training &amp; Placement Guidance<br>for a <span>Successful Career in IT</span></div>
+
+      <div class="content-grid">
+        <div class="panel">
+          <div class="panel-title">OUR COURSES</div>
+          <div class="course"><div class="dot">⌨</div>FULL STACK DEVELOPMENT (JAVA | PYTHON)</div>
+          <div class="course"><div class="dot">AI</div>PYTHON WITH AI / ML</div>
+          <div class="course"><div class="dot">☁</div>CLOUD &amp; DEVOPS</div>
+          <div class="course"><div class="dot">📱</div>MOBILE APP DEVELOPMENT (FLUTTER)</div>
+          <div class="course"><div class="dot">C+</div>BASIC PROGRAMMING (C | C++ | PYTHON)</div>
+        </div>
+
+        <div class="connect">
+          <h3>CONNECT WITH US</h3>
+          <a class="social-link linkedin" href="https://www.linkedin.com/company/142883301/" target="_blank"><span>in</span>LinkedIn<span class="arrow">›</span></a>
+          <a class="social-link instagram" href="https://www.instagram.com/nova.hamo" target="_blank"><span>◎</span>Instagram<span class="arrow">›</span></a>
+          <a class="social-link youtube" href="https://youtube.com/@novahamotechoders" target="_blank"><span>▶</span>YouTube<span class="arrow">›</span></a>
+          <a class="social-link whatsapp" href="https://whatsapp.com/channel/0029VbDl5kA8PgsG5N9P9p3w" target="_blank"><span>☎</span>WhatsApp Channel<span class="arrow">›</span></a>
+          <a class="social-link facebook" href="https://www.facebook.com/Godsarmyoffical" target="_blank"><span>f</span>Facebook<span class="arrow">›</span></a>
+          <a class="social-link indiaweb" href="https://www.novahamotechnologies.com/" target="_blank"><span>🌐</span>India Website<span class="arrow">›</span></a>
+          <a class="social-link singaporeweb" href="https://hamotech.sg/" target="_blank"><span>🌐</span>Singapore Website<span class="arrow">›</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="brand-row">
+        <div class="logo-badge logo-image"><img src="images/novahamo-logo.png" alt="NovaHamo Technologies logo"></div>
+        <div>
+          <h1 class="nova">NovaHamo</h1>
+          <div class="subtitle" style="color:#0a7a45">technologies pvt.ltd</div>
+          <div class="tagline">INNOVATE &nbsp; | &nbsp; BUILD &nbsp; | &nbsp; EMPOWER</div>
+        </div>
+      </div>
+
+      <div class="services-title">OUR <span>SERVICES</span> <small style="font-size:15px;color:#334;">| TURNING IDEAS INTO REAL SOLUTIONS</small></div>
+      <div class="services">
+        <div class="service"><div class="ico">🖥️</div><b>Responsive Website Development</b><small>Modern | Scalable | SEO Friendly</small></div>
+        <div class="service"><div class="ico">📱</div><b>Mobile App Development</b><small>Android | iOS | Cross-Platform</small></div>
+        <div class="service"><div class="ico">☁️</div><b>Cloud Services</b><small>Secure | Flexible | Scalable</small></div>
+        <div class="service"><div class="ico">🎧</div><b>IT Support</b><small>Reliable | Fast | Always On</small></div>
+        <div class="service"><div class="ico">📊</div><b>ERP Systems</b><small>Customized | Efficient | Growth Ready</small></div>
+        <div class="service"><div class="ico">⚙️</div><b>Business Technology Solutions</b><small>From Idea to Impact</small></div>
+      </div>
+
+      <div class="hq">
+        <div class="flag">🇸🇬</div>
+        <div>
+          <div class="label">MAIN BRANCH</div>
+          <h2>SINGAPORE</h2>
+          <p><b>GLOBAL HEADQUARTERS</b></p>
+          <p>Driving Global Innovation for a Better Tomorrow</p>
+          <p><a href="https://hamotech.sg/" target="_blank" style="color:#fff;font-weight:900;">Visit Singapore Website →</a></p>
+        </div>
+      </div>
+
+      <div class="branches">
+        <div class="branch">🇮🇳 INDIA<br><span style="font-weight:500">Guduvancheri, Chennai</span></div>
+        <div class="branch">🇸🇬 SINGAPORE<br><span style="font-weight:500">Global Headquarters</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="foot-left">
+      <div>
+        <div class="contact-title">CONTACT US</div>
+        <div class="phone">☎ 7659044625</div>
+        <div class="phone">☎ 7200477378</div>
+      </div>
+      <div class="details">
+        <p>✉ <a href="mailto:novahamotechnologies25@gmail.com">novahamotechnologies25@gmail.com</a></p>
+        <p>🌐 <a href="https://www.novahamotechnologies.com/" target="_blank">https://www.novahamotechnologies.com</a></p>
+        <p>🌐 <a href="https://symphonious-truffle-082ec7.netlify.app/" target="_blank">Singapore Website</a></p>
+        <p>📍 Guduvancheri, Chennai, India</p>
+        <p>📍 <b>Our Main Branch: Singapore</b></p>
+      </div>
+    </div>
+
+    <div class="foot-right">
+      <div class="follow-title">FOLLOW US ON</div>
+      <div class="follow-icons">
+        <a href="https://www.linkedin.com/company/142883301/" target="_blank"><span class="round">in</span>LinkedIn</a>
+        <a href="https://whatsapp.com/channel/0029VbDl5kA8PgsG5N9P9p3w" target="_blank"><span class="round">☎</span>WhatsApp</a>
+        <a href="https://www.instagram.com/nova.hamo" target="_blank"><span class="round">◎</span>Instagram</a>
+        <a href="https://youtube.com/@novahamotechoders" target="_blank"><span class="round">▶</span>YouTube</a>
+        <a href="https://www.facebook.com/Godsarmyoffical" target="_blank"><span class="round">f</span>Facebook</a>
+        <a href="https://www.novahamotechnologies.com/" target="_blank"><span class="round">🌐</span>India Website</a>
+        <a href="https://symphonious-truffle-082ec7.netlify.app/" target="_blank"><span class="round">🌐</span>Singapore Website</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
